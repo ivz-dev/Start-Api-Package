@@ -1,0 +1,58 @@
+{
+  "package": "Algorithmia",
+  "tagline": "Algorithmia API",
+  "description": "Connect to the Algorithmia API to host language-agnostic functions and algorithms via an API. Test an API call and export the code snippet into your app.",
+  "image": "https://logo.clearbit.com/algorithmia.com",
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Algorithmia-Package",
+  "keywords": [
+    "API",
+    "algorithm",
+    "function",
+    "learning",
+    "machine",
+    "MachineLearning"
+  ],
+  "accounts": {
+    "domain": "algorithmia.com",
+    "credentials": [
+      "apiKey"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "callAlgorithm",
+      "description": "You can call each algorithm from the Algorithmia marketplace",
+      "args": [{
+        "name": "apiKey",
+        "type": "credentials",
+        "info": "The api key obtained from Algorithmia",
+        "required": true
+      },
+        {
+          "name": "owner",
+          "type": "String",
+          "info": "Algorithm owner",
+          "required": true
+        },
+        {
+          "name": "algoname",
+          "type": "String",
+          "info": "Algorithm name",
+          "required": true
+        },
+        {
+          "name": "data",
+          "type": "JSON",
+          "info": "Input for the algorithm. JSON object",
+          "required": true
+        }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    }
+  ]
+}
